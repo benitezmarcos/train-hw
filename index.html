@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Train Assignment</title>
+   
+    <!--Moment-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--Header-->
+        <div class="jumbotron text-center">
+            <h1>Train Schedule</h1>
+            <h2>All Aboard!</h2>>
+            <p id="time"></p>
+        </div>
+        <!--search parameter panel -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <h3 class="panel-title bg">
+                        Current Train Schedule
+                    </h3>
+                    <div class="panel-body train-info bg-white mb-3">
+                        <table class="table table-hover" id='trainTable'>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            
+                            <tr>
+                                <td class="trainData"></td>
+                              </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <h3 class="panel-title bg">
+                        Search Results:
+                    </h3>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group h4">
+                                <label>Add a train:</label>
+                                <input type="text" class="form-control" id="trainNameInput">
+                            </div>
+                            <div class="form-group h4">
+                                <label>Destination:</label>
+                                <input type="text" class="form-control" id="destInput">
+                            </div>
+                            <div class="form-group h4">
+                                <label>First train time: (hh:mm - military time):</label>
+                                <input type="text" class="form-control" id="firstTrainInput">
+                            </div>
+                            <div class="form-group h4">
+                                <label>Frequency (Minutes):</label>
+                                <input type="text" class="form-control" id="freqInput">
+                            </div>
+                            <button type="submit" id="newTrainBtn" class="btn border btn-default button mb-3 p-3">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
+    </script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
