@@ -1,0 +1,26 @@
+body{
+    background-image: url("/assets/img/bg.jpg");
+
+}
+
+#header{
+    background-image: url("/assets/img/main.jpg");
+    color: white;
+}
+
+.panel{
+    background-color: gray;
+    color: black;
+    /* border-color: gray; */
+    border: 3px solid gray;
+    /* text-align: center; */
+}
+
+#newTrainBtn{
+    background-color: red;
+    color: white;
+}
+
+.btn-container{
+    text-align: center;
+}

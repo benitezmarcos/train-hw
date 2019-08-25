@@ -1,32 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
 
-    <!-- Bootstrap CSS -->
+    <!--Style CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <title>Train Assignment</title>
-   
-    <!--Moment-->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
-
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!--Moment.js-->
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <!--Header-->
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center" id="header">
             <h1>Train Schedule</h1>
             <h2>All Aboard!</h2>>
             <p id="time"></p>
         </div>
-        <!--search parameter panel -->
+
+        <!--Search Panel-->
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
@@ -46,22 +49,24 @@
                             </thead>
                             <tbody>
 
-                            
-                            <tr>
-                                <td class="trainData"></td>
-                              </tr>
+
+                                <tr>
+                                    <td class="trainData"></td>
+                                </tr>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+        <br />
+
 
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <h3 class="panel-title bg">
+                    <!-- <h3 class="panel-title bg">
                         Search Results:
-                    </h3>
+                    </h3> -->
                     <div class="panel-body">
                         <form>
                             <div class="form-group h4">
@@ -70,7 +75,7 @@
                             </div>
                             <div class="form-group h4">
                                 <label>Destination:</label>
-                                <input type="text" class="form-control" id="destInput">
+                                <input type="text" class="form-control" id="destinationInput">
                             </div>
                             <div class="form-group h4">
                                 <label>First train time: (hh:mm - military time):</label>
@@ -78,33 +83,41 @@
                             </div>
                             <div class="form-group h4">
                                 <label>Frequency (Minutes):</label>
-                                <input type="text" class="form-control" id="freqInput">
+                                <input type="text" class="form-control" id="frequencyInput">
                             </div>
-                            <button type="submit" id="newTrainBtn" class="btn border btn-default button mb-3 p-3">Submit</button>
+                            <div class="btn-container">
+                                <button type="submit" id="newTrainBtn"
+                                    class="btn border btn-default button mb-3 p-3">Submit</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+
+    <!--Firebase Connection-->
+    <script src="assets/js/app.js"></script>
+
+    <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous">
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous">
-    </script>
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous">
-    </script>
-    <script src="assets/javascript/app.js"></script>
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
